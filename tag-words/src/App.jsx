@@ -1,15 +1,25 @@
-import './reset.css'
-import './App.css'
-import Header from './components/Header';
-import ContentWrap from './components/ContentWrap';
+import './reset.css';
+import './App.css';
+import { useState } from 'react';
+import TagWords from './components/TagWords';
 
 
 function App() {
+  const [openModal, setOpenModal] = useState(true);
+
+  const playGame = () => {
+    setOpenModal(!openModal);
+  }
 
   return (
-    <div>
-      <Header />
-      <ContentWrap />
+    <div className='App'>
+      <button 
+        className='openTagWords'
+        onClick={playGame}
+      />
+      <TagWords 
+        open={openModal}
+      />
     </div>
   )
 }

@@ -1,0 +1,9 @@
+.tagWords{
+    position: absolute;
+    top:50%;
+    left: 60%;
+    transform: translate(-60%, -50%);
+    width: 1000px;
+    height: 700px;
+    background-color: antiquewhite;
+}
